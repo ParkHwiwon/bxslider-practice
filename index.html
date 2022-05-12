@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>넘버원 굿즈샵 TVING MALL</title>
+
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    
+    
+    
+
+
+    <!-- 스타일시트 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="nav.js"></script>
+    <script>
+        $(document).ready(function() {
+            var meinSlider = $('.ba-slide').bxSlider({
+                auto: true,
+                controls: true,
+                pager: false,
+                pause: 5000,
+                controls: false
+            }); //메인배너 슬라이드
+            $(".l-arrow").on("click", function() {
+                meinSlider.goToPrevSlide();
+                return false;
+            });
+            $(".r-arrow").on("click", function() {
+                meinSlider.goToNextSlide();
+                return false;
+            });
+        }); // 슬라이드 및 좌,우 클릭 버튼
+
+        $(document).ready(function() {
+            var popSlider = $('.popSlider').bxSlider({
+                pager: true,
+                pause: 5000,
+                controls: false
+            }); //인기급상승 슬라이드
+            $(".l-arrow1").on("click", function() {
+                popSlider.goToPrevSlide();
+                return false;
+            });
+            $(".r-arrow1").on("click", function() {
+                popSlider.goToNextSlide();
+                return false;
+            });
+        }); // 슬라이드 및 좌,우 클릭 버튼
+
+        $(document).ready(function() {
+            var newSlider = $('.newSlider').bxSlider({
+                pager: true,
+                pause: 5000,
+                controls: false
+            }); //오늘의신상 슬라이드
+            $(".l-arrow2").on("click", function() {
+                newSlider.goToPrevSlide();
+                return false;
+            });
+            $(".r-arrow2").on("click", function() {
+                newSlider.goToNextSlide();
+                return false;
+            });
+        }); // 슬라이드 및 좌,우 클릭 버튼
+
+        $(document).ready(function() { 
+            $(".main-nav>li").mouseover(function() { 
+                $(this).children(".sub").stop().slideDown(); 
+            }); 
+            $(".main-nav>li").mouseleave(function() { 
+                    $(this).children(".sub").stop().slideUp(); 
+                }); 
+            });
+
+
+    </script>
+    <style>
+        .bx-wrapper {
+            border: 0;
+            box-shadow: none;
+            background-color: inherit;
+            margin-bottom: 0;
+        }
+        .bx-controls{
+            position: relative;
+            bottom: 50px;
+        }
+        
+
+</style>
+
+    </style>
+
+
+</head>
+
+
+
+<body>
+    <container>
+        <header>
+            <ul>
+                <li>
+                    <div class="header-wrap">
+                        <h1 class="logo">
+                            <a href="#"><img src="./img/logo.png" alt="TVING MALL"></a>
+                        </h1>
+                    </div>
+                </li>
+                <!--로고-->
+
+
+
+                <li style="margin-top: 32px;">
+                    <div class="searchbox">
+                        <form action="">
+                            <label for="search">
+                         <div class="search"> 
+                             <!--자동완성 기능 삽입 -->
+                            <input type="search" list="search-op" placeholder="검색어를 입력해주세요">
+                            <datalist id="search-op">
+                              <option value="내과박원장"></option>
+                              <option value="드라마"></option>
+                              <option value="스물다섯 스물하나"></option>
+                              <option value="티빙"></option>
+                              <option value="기상청 사람들"></option>
+                              <option value="갯마을 차차차"></option>
+                              <option value="보이스 4"></option>
+                              <option value="악마판사"></option>
+                            </datalist>
+                          </label>
+                            <button class="btn" type="submit"></button>
+                        </form>
+                    </div>
+                    </div>
+                </li>
+                <!--검색창-->
+
+
+
+                <li>
+                    <div class="right-menu1">
+                        <span style="padding: 10px; margin-left: -30px;" class="cli"><a href="https://user.tving.com/pc/user/login.tving?mallCallback=https%3A%2F%2Fmallapi.tving.com&returnUrl=https%3A%2F%2Fmall.tving.com%2Fhome">로그인</a></span><span> | </span>
+                        <span style="padding: 10px;" id="fontcolor1" class="cli"><a href="https://user.tving.com/pc/user/regist.tving">회원가입</a></span><span> | </span>
+                        <span style="padding: 10px;" class="cli"><a href="https://mall.tving.com/order/cart"></a><img class="cartsize" src="./img/cart.PNG" alt=""></span>
+                    </div>
+                </li>
+                <!--우측메뉴-->
+            </ul>
+            <div class="navmenu">
+                <div class=" menu cli">PROGRAM</div>
+                <div class=" menu cli">#2521</div>
+                <div class=" menu cli">#여고추리반2</div>
+                <div class=" menu cli">#내과박원장</div>
+                <div class=" menu" style=" color: gray;"> | </div>
+                <div class=" menu cli">TVING ORIGINAL</div> 
+                <div class=" menu cli">드라마</div>
+                <div class=" menu cli">예능</div>
+                <div class=" menu cli">애니/캐릭터</div>
+                <div class=" menu cli">아티스트</div>
+            </div> 
+
+            
+            
+
+
+
+        </header>
+        <main>
+            <section class="main-banner">
+                <div>
+                    <button class="l-arrow cli"></button>
+                </div>
+                <div class="s-container">
+                    <div class="ba-slide">
+                        <img class="main-banner-img " src="./img/main-img1.jpg " alt=" ">
+                        <img class="main-banner-img " src="./img/main-img2.jpg " alt=" ">
+                    </div>
+                </div>
+                <div>
+                    <button class="r-arrow cli"></button>
+                </div>
+            </section>
+            <!-- 메인배너 -->
+
+
+
+
+            <section class="popular ">
+                <div>
+                    <button class="l-arrow1 cli"></button>
+                </div>
+                <div class="pop-mar ">
+                    <span class="pop-font ">인기 급상승</span>
+                    <a class="more1 " href="https://mall.tving.com/goods/program/section ">더보기</a>
+                    <div class="pop-bg "></div>
+                    <div class="popSlider">
+                    <ul>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/스물다섯스물하나OST.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[YES24] 스물다섯 스물하나 (tvN<br> 주말드라마) OST</div>
+                            <div class="pop-banner-dis cli">20%</div>
+                            <div class="pop-banner-price cli">29,700</div>
+                            <div class="pop-banner-prevprice cli">36,700</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/기상청사람들세트.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[YES24] 기상청 사람들 세트</div>
+                            <div class="pop-banner-dis cli">10%</div>
+                            <div class="pop-banner-price cli">34,200</div>
+                            <div class="pop-banner-prevprice cli">38,000</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/스물다섯스물하나레트로시계.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[스물다섯 스물하나] 공식 굿즈 레트로 시계</div>
+                            <div class="pop-banner-price cli">29,000</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/기상청사람들세트.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[YES24] 싱어게인2 - 무명가수전<br>O.S.T</div>
+                            <div class="pop-banner-dis cli">21%</div>
+                            <div class="pop-banner-price cli">23,800</div>
+                            <div class="pop-banner-prevprice cli">30,000</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/스물다섯스물하나휴대폰케이스.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[스물다섯 스물하나] 공식 굿즈 휴대폰 케이스</div>
+                            <div class="pop-banner-price cli">19,000</div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/술꾼도시여자들 시즌1.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[YES24] 술꾼도시여자들 시즌1</div>
+                            <div class="pop-banner-dis cli">10%</div>
+                            <div class="pop-banner-price cli">15,300</div>
+                            <div class="pop-banner-prevprice cli">17,000</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/샴푸바.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[유료회원 20% 쿠폰] 내과박원장<br> 난다모 샴푸바+헤어브러쉬 증정</div>
+                            <div class="pop-banner-dis cli">50%</div>
+                            <div class="pop-banner-price cli">16,000</div>
+                            <div class="pop-banner-prevprice cli">32,000</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/여고추리반2.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[유료회원 20% 쿠폰] 여고추리반2 태평여고 굿즈 패키지</div>
+                            <div class="pop-banner-dis cli">13%</div>
+                            <div class="pop-banner-price cli">28,000</div>
+                            <div class="pop-banner-prevprice cli">32,000</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/새라여고.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">여고추리반 새라여고 미스터리 스티커</div>
+                            <div class="pop-banner-dis cli">50%</div>
+                            <div class="pop-banner-price cli">2,000</div>
+                            <div class="pop-banner-prevprice cli">4,000</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/신묘한일력.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">2022 매일매일 신묘한 일력(신서유기 캘린더)</div>
+                            <div class="pop-banner-dis cli">71%</div>
+                            <div class="pop-banner-price cli">5,000</div>
+                            <div class="pop-banner-prevprice cli">17,000</div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/슬리퍼.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[9,10화 착용] EMERGENCY 이머전시 슬리퍼</div>
+                            <div class="pop-banner-dis cli">77%</div>
+                            <div class="pop-banner-price cli">5,900</div>
+                            <div class="pop-banner-prevprice cli">24,900</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/에콥백.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[유료회원 10% 쿠폰] EMERGENCY</div>
+                            <div class="pop-banner-dis cli">12%</div>
+                            <div class="pop-banner-price cli">22,000</div>
+                            <div class="pop-banner-prevprice cli">24,900</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/갯마을차차차.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[YES24] 갯마을 차차차(tvN 주말드라마) OST</div>
+                            <div class="pop-banner-dis cli">20%</div>
+                            <div class="pop-banner-price cli">20,000</div>
+                            <div class="pop-banner-prevprice cli">24,700</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/토끼인형.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[유미의 세포들] 스페이스 래빗 인형</div>
+                            <div class="pop-banner-price cli">25,000</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/바나나머크컵.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[유미의 세포들]바나나 머크컵&바나나 코스터</div>
+                            <div class="pop-banner-price cli">8,000</div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="pop-banner-size" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/디퓨저.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">환승연애 굿즈 디퓨저(ex향기,new향기)</div>
+                            <div class="pop-banner-dis cli">48%</div>
+                            <div class="pop-banner-price cli">7,900</div>
+                            <div class="pop-banner-prevprice cli">15,000</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/티빙에코백.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">티빙 씨네마 아트무비 콜렉션 에코백(with 애슝작가)<br> 난다모 샴푸바+헤어브러쉬 증정</div>
+                            <div class="pop-banner-dis cli">80%</div>
+                            <div class="pop-banner-price cli">3,000</div>
+                            <div class="pop-banner-prevprice cli">15,000</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/악마판사.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[YES24] 악마판사 오리지널 대본집 1,2세트</div>
+                            <div class="pop-banner-dis cli">10%</div>
+                            <div class="pop-banner-price cli">34,200</div>
+                            <div class="pop-banner-prevprice cli">38,000</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/보이스4.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">[YES24] 보이스4 메이킹 스토리&대본집</div>
+                            <div class="pop-banner-dis cli">10%</div>
+                            <div class="pop-banner-price cli">28,800</div>
+                            <div class="pop-banner-prevprice cli">32,000</div>
+                        </li>
+                        <li class="pop-banner-size2" style="width: 234px;">
+                            <div class="pop-banner-img"><a href="#"><img src="./img/popimg/떡메모지.jpg" alt=""></a></div>
+                            <div class="pop-banner-font cli">아받대x놀토 받아쓰기 떡메모지</div>
+                            <div class="pop-banner-dis cli">67%</div>
+                            <div class="pop-banner-price cli">2,000</div>
+                            <div class="pop-banner-prevprice cli">6,000</div>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                <div>
+                    <button class="r-arrow1 cli"></button>
+                </div>
+            </section>
+            <!--인기급상승 -->
+
+
+
+
+            <section class="today-new ">
+                <div>
+                    <button class="l-arrow2 cli"></button>
+                </div>
+                <div class="new-mar ">
+                    <span class="new-font ">오늘의 신상</span>
+                    <a class="more2 " href="https://mall.tving.com/goods/category/new ">더보기</a>
+                    <div class="new-bg "></div>
+                    <div class="newSlider">
+                        <ul>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/스물다섯스물하나OST.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[YES24] 스물다섯 스물하나 (tvN<br> 주말드라마) OST</div>
+                                <div class="new-banner-dis cli">20%</div>
+                                <div class="new-banner-price cli">29,700</div>
+                                <div class="new-banner-prevprice cli">36,700</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/기상청사람들세트.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[YES24] 기상청 사람들 세트</div>
+                                <div class="new-banner-dis cli">10%</div>
+                                <div class="new-banner-price cli">34,200</div>
+                                <div class="new-banner-prevprice cli">38,000</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/기상청사람들2.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[YES24] 기상청 사람들 2</div>
+                                <div class="new-banner-dis cli">10%</div>
+                                <div class="new-banner-price cli">23,800</div>
+                                <div class="new-banner-prevprice cli">30,000</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/기상청사람들1.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[YES24] 기상청 사람들 1</div>
+                                <div class="new-banner-dis cli">21%</div>
+                                <div class="new-banner-price cli">23,800</div>
+                                <div class="new-banner-prevprice cli">30,000</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/서른,아홉2.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[YES24] 서른, 아홉2</div>
+                                <div class="new-banner-dis cli">10%</div>
+                                <div class="new-banner-price cli">16,650</div>
+                                <div class="new-banner-prevprice cli">18,500</div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/서른,아홉1.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[YES24] 서른, 아홉1</div>
+                                <div class="new-banner-dis cli">10%</div>
+                                <div class="new-banner-price cli">16,650</div>
+                                <div class="new-banner-prevprice cli">18,500</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/싱어게인2.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[YES24] 싱어게인2 - 무명가수전<br>O.S.T</div>
+                                <div class="new-banner-dis cli">21%</div>
+                                <div class="new-banner-price cli">23,800</div>
+                                <div class="new-banner-prevprice cli">30,000</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/슬기로운의사생활ost.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[YES24] 슬기로운 의사생활 시즌2 드라마 음악(OST)</div>
+                                <div class="new-banner-dis cli">20%</div>
+                                <div class="new-banner-price cli">74,100</div>
+                                <div class="new-banner-prevprice cli">91,500</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/대탈출 마그넷.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">대탈출 타임머신 마그넷 세트</div>
+                                <div class="new-banner-price cli">20,000</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/대탈출 머그컵.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">대탈출 타임머신 TIME is GOLD 머그컵(블랙)</div>
+                                <div class="new-banner-price cli">15,000</div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/샴푸바.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[유료회원 20% 쿠폰] 내과박원장<br> 난다모 샴푸바+헤어브러쉬 증정</div>
+                                <div class="new-banner-dis cli">50%</div>
+                                <div class="new-banner-price cli">16,000</div>
+                                <div class="new-banner-prevprice cli">32,000</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/여고추리반2.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[유료회원 20% 쿠폰] 여고추리반2 태평여고 굿즈 패키지</div>
+                                <div class="new-banner-dis cli">13%</div>
+                                <div class="new-banner-price cli">28,000</div>
+                                <div class="new-banner-prevprice cli">32,000</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/새라여고.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">여고추리반 새라여고 미스터리 스티커</div>
+                                <div class="new-banner-dis cli">50%</div>
+                                <div class="new-banner-price cli">2,000</div>
+                                <div class="new-banner-prevprice cli">4,000</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/병원복.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[유료회원 10%쿠폰]EMERGENCY</div>
+                                <div class="new-banner-price cli">35,000</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/신묘한일력.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">2022 매일매일 신묘한 일력(신서유기 캘린더)</div>
+                            <div class="new-banner-dis cli">71%</div>
+                            <div class="new-banner-price cli">5,000</div>
+                            <div class="new-banner-prevprice cli">17,000</div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/슬리퍼.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[9,10화 착용] EMERGENCY 이머전시 슬리퍼</div>
+                                <div class="new-banner-dis cli">77%</div>
+                                <div class="new-banner-price cli">5,900</div>
+                                <div class="new-banner-prevprice cli">24,900</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/유미의세포들ost.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[YES24] 유미의세포들(tvN 금토드라마) OST</div>
+                                <div class="new-banner-dis cli">19%</div>
+                                <div class="new-banner-price cli">22,300</div>
+                                <div class="new-banner-prevprice cli">27,500</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/에콥백.jpg" alt=""></a></div>
+                                <div class="pop-banner-font cli">[유료회원 10% 쿠폰] EMERGENCY</div>
+                            <div class="pop-banner-dis cli">12%</div>
+                            <div class="pop-banner-price cli">22,000</div>
+                            <div class="pop-banner-prevprice cli">24,900</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/갯마을차차차1.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[YES24] 갯마을 차차차 1</div>
+                                <div class="new-banner-dis cli">10%</div>
+                                <div class="new-banner-price cli">16,200</div>
+                                <div class="new-banner-prevprice cli">18,000</div>
+                            </li>
+                            <li class="new-banner-size2" style="width: 234px;">
+                                <div class="new-banner-img"><a href="#"><img src="./img/popimg/갯마을차차차2.jpg" alt=""></a></div>
+                                <div class="new-banner-font cli">[YES24] 갯마을 차차차 2</div>
+                                <div class="new-banner-dis cli">10%</div>
+                                <div class="new-banner-price cli">16,200</div>
+                                <div class="new-banner-prevprice cli">18,000</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <button class="r-arrow2 cli"></button>
+                </div>
+            </section>
+            <!--오늘의 신상 -->
+
+        </main>
+
+
+        <footer>
+            <div class="footer-b-size ">
+                <div class="footer-first-size ">
+                    <div class="footer-first-mar ">
+                        <ul>
+                            <li class="cli "><a href="https://www.tving.com/onboarding ">티빙소개</a></li>
+                            <li class="cli "><a href="https://user.tving.com/pc/user/login.tving?mallCallback=https%3A%2F%2Fmallapi.tving.com&returnUrl=https%3A%2F%2Fmall.tving.com%2Fmypage%2Factivity%2Fmy-qna ">고객센터</a></li>
+                            <li class="cli "><a href="https://mall.tving.com/board/notice/list ">공지사항</a></li>
+                            <li class="cli "><a href="https://mall.tving.com/board/faq/list ">FAQ</a></li>
+                            <li class="cli "><a target="_blank " href="https://www.tving.com/policy/terms ">이용약관</a></li>
+                            <li class="cli "><a target="_blank " href="https://www.tving.com/policy/privacy ">개인정보처리방침</a></li>
+                            <li class="cli "><a target="_blank " href="https://www.tving.com/policy/youth ">청소년 보호정책</a></li>
+                            <li class="cli "><a target="_blank " href="https://www.tving.com/help/proposal ">제휴/입점/광고 문의</a></li>
+                            <li class="cli "><a target="_blank " href="https://www.tving.com/onboarding ">티빙메인 바로가기</a></li>
+                            <li class="cli ">브랜드 바로가기</li>
+                            <li class="cli ">계열사 바로가기</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-sec-size ">
+                    <div class="footer-sec-mar ">
+                        <p style="margin-bottom: 0; ">대표이사: PARK HWIWON<span> | </span>사업자정보확인<span> | </span>개인정보관리 책임자 박휘원<span> | </span>사업자등록번호 111-11-11111
+                            <span> | </span>통신판매신고번호 2022부산북구1111호</p>
+                        <p style="margin-top: 0; ">부산광역시 부산진구 중앙대로 631 선문빌딩 10F<span> | </span>호스팅제공자:예일직업전문학교<span> | </span>고객센터 1666-6666(평일 09시~ 18시)<span>
+                    | </span>사대표메일 phw3052@naver.com</p>
+                        <p></p>
+                        <p>Copyright (C) TVING All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </footer>
+    </container>
+    <!--ALL-->
+
+</body>
+
+</html>
